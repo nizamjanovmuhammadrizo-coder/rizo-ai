@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizo AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <img src="logo.png" alt="Rizo AI">
+        </div>
+
+        <button id="newChat" class="new-chat">
+            ＋ Новый чат
+        </button>
+
+        <div class="history-title">
+            История
+        </div>
+
+        <div id="history"></div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <button id="mobileMenu" class="menu">
+                ☰
+            </button>
+
+            <strong>Rizo AI</strong>
+
+        </header>
+
+
+        <section id="chat" class="chat">
+
+            <div id="welcome" class="welcome">
+
+                <img
+                    class="welcome-logo"
+                    src="logo.png"
+                    alt="Rizo AI"
+                >
+
+                <h1>
+                    Чем могу помочь?
+                </h1>
+
+                <p>
+                    Спроси что-нибудь у Rizo AI
+                </p>
+
+
+                <div class="suggestions">
+
+                    <button
+                        data-question="Объясни простыми словами, что такое искусственный интеллект"
+                    >
+                        Объясни, что такое ИИ
+                    </button>
+
+
+                    <button
+                        data-question="Помоги создать сайт"
+                    >
+                        Помоги создать сайт
+                    </button>
+
+
+                    <button
+                        data-question="Придумай бизнес-идею"
+                    >
+                        Придумай бизнес-идею
+                    </button>
+
+
+                    <button
+                        data-question="Помоги изучить программирование"
+                    >
+                        Помоги изучить программирование
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div class="input-area">
+
+            <form id="form">
+
+                <textarea
+                    id="input"
+                    placeholder="Сообщить Rizo AI..."
+                    rows="1"
+                ></textarea>
+
+
+                <button
+                    id="send"
+                    type="submit"
+                >
+                    ↑
+                </button>
+
+            </form>
+
+
+            <small>
+                Rizo AI может допускать ошибки.
+                Проверяй важную информацию.
+            </small>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

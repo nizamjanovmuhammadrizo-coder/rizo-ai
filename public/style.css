@@ -1,0 +1,1007 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #212121;
+    color: #ececec;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 260px;
+
+    padding: 16px 12px;
+
+    background: #171717;
+
+    border-right: 1px solid #2b2b2b;
+
+    overflow-y: auto;
+
+    z-index: 20;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    padding: 5px 8px 18px;
+}
+
+.brand img {
+    display: block;
+
+    width: 145px;
+    height: auto;
+
+    max-height: 85px;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+
+/* ========================================
+   NEW CHAT
+======================================== */
+
+.new-chat {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 11px 13px;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #ececec;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: left;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.new-chat:hover {
+    background: #242424;
+    border-color: #555;
+}
+
+.new-chat:active {
+    transform: scale(0.99);
+}
+
+
+/* ========================================
+   HISTORY
+======================================== */
+
+.history-title {
+    margin: 26px 10px 9px;
+
+    color: #8a8a8a;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.main {
+    height: 100vh;
+    margin-left: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #212121;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 24px;
+
+    background: rgba(33, 33, 33, 0.88);
+
+    border-bottom: 1px solid #2d2d2d;
+
+    backdrop-filter: blur(12px);
+}
+
+.header strong {
+    color: #e8e8e8;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+.menu {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    margin-right: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #ddd;
+
+    font-size: 21px;
+}
+
+.menu:hover {
+    background: #2a2a2a;
+}
+
+
+/* ========================================
+   CHAT
+======================================== */
+
+.chat {
+    flex: 1;
+
+    overflow-y: auto;
+
+    min-height: 0;
+
+    padding:Ф
+        42px 24px 190px;
+
+    scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   WELCOME
+======================================== */
+
+.welcome {
+    width: 100%;
+    max-width: 760px;
+
+    margin:
+        7vh auto 0;
+
+    text-align: center;
+}
+
+.welcome-logo {
+    display: block;
+
+    width: min(240px, 60vw);
+
+    max-height: 150px;
+
+    object-fit: contain;
+
+    margin:
+        0 auto 22px;
+
+    filter:
+        drop-shadow(
+            0 10px 35px rgba(255, 255, 255, 0.07)
+        );
+}
+
+.welcome h1 {
+    margin: 0;
+
+    color: #f0f0f0;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    letter-spacing: -0.8px;
+}
+
+.welcome p {
+    margin:
+        10px 0 0;
+
+    color: #929292;
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   SUGGESTIONS
+======================================== */
+
+.suggestions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.suggestions button {
+    min-height: 68px;
+
+    padding:
+        14px 16px;
+
+    border:
+        1px solid #3a3a3a;
+
+    border-radius: 10px;
+
+    background: #2a2a2a;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.suggestions button:hover {
+    background: #303030;
+
+    border-color: #505050;
+
+    transform:
+        translateY(-1px);
+}
+
+.suggestions button:active {
+    transform:
+        translateY(0);
+}
+
+
+/* ========================================
+   MESSAGES
+======================================== */
+
+.message {
+    width: 100%;
+
+    max-width: 860px;
+
+    margin:
+        0 auto 28px;
+
+    display: flex;
+
+    gap: 14px;
+
+    animation:
+        messageAppear 0.2s ease;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ========================================
+   AVATAR
+======================================== */
+
+.avatar {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #10a37f;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    user-select: none;
+}
+
+.message.user .avatar {
+    background: #454545;
+}
+
+
+/* ========================================
+   MESSAGE CONTENT
+======================================== */
+
+.message-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.message-text {
+    padding-top: 3px;
+
+    color: #ececec;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   USER MESSAGE
+======================================== */
+
+.message.user {
+    margin-bottom: 25px;
+}
+
+.message.user .message-text {
+    color: #f0f0f0;
+}
+
+
+/* ========================================
+   INPUT AREA
+======================================== */
+
+.input-area {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 260px;
+    right: 0;
+
+    z-index: 15;
+
+    padding:
+        28px 20px 18px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(33, 33, 33, 0),
+            rgba(33, 33, 33, 0.92) 32%,
+            #212121 65%
+        );
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+form {
+    width: 100%;
+
+    max-width: 860px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    padding:
+        9px 9px 9px 15px;
+
+    background: #2f2f2f;
+
+    border:
+        1px solid #4b4b4b;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.22);
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+form:focus-within {
+    border-color: #606060;
+
+    box-shadow:
+        0 5px 24px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
+textarea {
+    flex: 1;
+
+    min-height: 38px;
+    max-height: 180px;
+
+    resize: none;
+
+    padding:
+        8px 5px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #f2f2f2;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+textarea::placeholder {
+    color: #8a8a8a;
+}
+
+
+/* ========================================
+   SEND BUTTON
+======================================== */
+
+#send {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f5f5f5;
+
+    color: #111;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+#send:hover {
+    background: #ffffff;
+
+    transform:
+        scale(1.04);
+}
+
+#send:active {
+    transform:
+        scale(0.97);
+}
+
+
+/* ========================================
+   WARNING
+======================================== */
+
+.input-area small {
+    display: block;
+
+    max-width: 860px;
+
+    margin:
+        8px auto 0;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   HISTORY BUTTONS
+======================================== */
+
+/*
+   Эти правила помогают кнопкам,
+   которые создаёт app.js
+*/
+
+#history button {
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+#history button:hover {
+    background: #2a2a2a !important;
+
+    border-color: #444 !important;
+}
+
+
+/* ========================================
+   MARKDOWN
+======================================== */
+
+.message-text h1,
+.message-text h2,
+.message-text h3 {
+    margin:
+        20px 0 10px;
+
+    color: #fff;
+
+    line-height: 1.3;
+}
+
+.message-text h1 {
+    font-size: 25px;
+}
+
+.message-text h2 {
+    font-size: 21px;
+}
+
+.message-text h3 {
+    font-size: 17px;
+}
+
+.message-text strong {
+    color: #fff;
+
+    font-weight: 700;
+}
+
+.message-text em {
+    color: #ddd;
+}
+
+.message-text ul {
+    margin:
+        10px 0;
+
+    padding-left: 25px;
+}
+
+.message-text li {
+    margin:
+        5px 0;
+}
+
+.message-text a {
+    color: #67b7ff;
+
+    text-decoration: none;
+}
+
+.message-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   INLINE CODE
+======================================== */
+
+.inline-code {
+    padding:
+        2px 6px;
+
+    border:
+        1px solid #414141;
+
+    border-radius: 5px;
+
+    background: #171717;
+
+    color: #eee;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CODE BLOCK
+======================================== */
+
+.code-block {
+    position: relative;
+
+    margin:
+        16px 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid #3a3a3a;
+
+    border-radius: 10px;
+
+    background: #111;
+}
+
+
+/* ========================================
+   CODE LANGUAGE
+======================================== */
+
+.code-language {
+    padding:
+        8px 12px;
+
+    background: #181818;
+
+    border-bottom:
+        1px solid #333;
+
+    color: #888;
+
+    font-size: 12px;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+}
+
+
+/* ========================================
+   COPY CODE
+======================================== */
+
+.copy-code {
+    position: absolute;
+
+    top: 7px;
+    right: 8px;
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid #444;
+
+    border-radius: 6px;
+
+    background: #292929;
+
+    color: #ccc;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.copy-code:hover {
+    background: #3a3a3a;
+
+    color: white;
+}
+
+
+/* ========================================
+   CODE
+======================================== */
+
+.code-block pre {
+    margin: 0;
+
+    padding: 15px;
+
+    overflow-x: auto;
+
+    color: #e6e6e6;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    white-space: pre;
+}
+
+.code-block code {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #414141;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+    background: #10a37f;
+    color: white;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .sidebar {
+        width: 260px;
+
+        transform:
+            translateX(-100%);
+
+        transition:
+            transform 0.2s ease;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .menu {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header {
+        height: 56px;
+
+        padding:
+            0 14px;
+    }
+
+    .chat {
+        padding:
+            28px 15px 175px;
+    }
+
+    .welcome {
+        margin-top: 5vh;
+    }
+
+    .welcome-logo {
+        width: min(210px, 60vw);
+    }
+
+    .welcome h1 {
+        font-size: 26px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .suggestions {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        margin-top: 25px;
+    }
+
+    .suggestions button {
+        min-height: 60px;
+    }
+
+    .message {
+        gap: 10px;
+
+        margin-bottom: 24px;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+
+        min-width: 30px;
+
+        border-radius: 7px;
+    }
+
+    .message-text {
+        font-size: 15px;
+    }
+
+    .input-area {
+        left: 0;
+
+        padding:
+            18px 10px 12px;
+    }
+
+    form {
+        border-radius: 17px;
+    }
+
+    .input-area small {
+        font-size: 10px;
+    }
+}
+
+
+/* ========================================
+   SMALL SCREENS
+======================================== */
+
+@media (max-width: 420px) {
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .welcome-logo {
+        width: 180px;
+    }
+
+    .chat {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .message {
+        gap: 8px;
+    }
+
+    .message-text {
+        font-size: 14px;
+    }
+}
